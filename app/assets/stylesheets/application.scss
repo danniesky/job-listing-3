@@ -20,7 +20,7 @@
  @import "font-awesome";
 
  .jumbotron {
-   background-image:url("header.jpg");
+   background-image: image-url("header.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    padding-bottom: 110px;
@@ -36,8 +36,9 @@
  .title {
    font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
    text-align: center;
-   margin-top: 200px;
+   margin-top: 300px;
    margin-bottom: 180px;
+   margin-top: 300px;
  }
 //------
  .slogan {
@@ -51,6 +52,7 @@
  .lead {
    margin-bottom: 60px;
    text-align: center;
+
    color: white;
  }
 
@@ -86,6 +88,18 @@
      margin-top: 60px;
  }
 
+
+
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 100px;
+ }
+
  //-----nav
    .navbar-default {
       background-color: #004D40;  //背景颜色
@@ -93,6 +107,8 @@
       border-color: #FFA726; //边框色
 
       margin-bottom: 0; //底部 margin 不撑开距离
+
+      margin-top: 0;  //顶部 margin 不撑开距离
   }
 
     @media (min-width: 768px)
@@ -282,4 +298,62 @@
 
 .login-help{
   font-size: 12px;
+}
+
+//search function
+
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 300px; //加上width
+    length:250px;
+    height:0px;
+}
+
+.nav-item{
+  margin-right: 50px;
+  margin-top: 8px;
+}
+
+
+//---------Footer---------
+
+.footer
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+  background-color: #004D40;
+
+  p
+  {
+    color: white;
+    margin-top: 30px;
+  }
+
+    color: white;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #004D40;
+}
+
+
+//-------Common-------
+.col-centerd{
+  float: none;
+  margin:0 auto; //the table of workship
+}
+
+.customed-flash {
+  margin: -50px 0px 21px 0px; // the message of flash
 }

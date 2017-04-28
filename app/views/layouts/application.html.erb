@@ -3,7 +3,6 @@
     <head>
         <title>Play hard </title>
         <%= csrf_meta_tags %>
-
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <link rel="shortcut icon" href="/images/favicon.ico">
@@ -12,10 +11,13 @@
     <body>
 
         <div class="container-fluid">
+          <!-- 導航欄 -->
           <div class="row">
             <%= render "common/navbar" %>
           </div>
-            <%= render "common/flashes" %>
+          <!-- flash 提示訊息 -->
+
+            <!-- 載入網頁內容 -->
             <%= yield %>
         </div>
 
