@@ -6,6 +6,7 @@ class Job < ApplicationRecord
   validates :wage_lower_bound, numericality: { greater_than: 0}
 
   scope :published, -> { where(is_hidden: false) }
+  scope :random5, -> { limit(5).order("RANDOM()") }
   scope :recent, -> { order('created_at DESC') }
 
   def publish!

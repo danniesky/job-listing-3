@@ -19,29 +19,31 @@
  @import "bootstrap";
  @import "font-awesome";
 
- .jumbotron {
+ /***the css type of home page ***/
+ .jumbotron
+ {
    background-image: image-url("header.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    padding-bottom: 110px;
- }
+   margin-top: px;
+   width: -1px; //定制图片宽度
+   height: -1px; //定制图片高度
 
  .container-fluid .jumbotron{
     padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
     margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
     border-radius: 0;//圆角为0
   }
-
 //background
  .title {
    font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
    text-align: center;
-   margin-top: 300px;
-   margin-bottom: 180px;
-   margin-top: 300px;
+   margin-top: 300px;//和顶部拉开距离
+   margin-bottom: 230px;//这样就可以紧接息面的描述文字
  }
 //------
- .slogan {
+ .slogan { //
    margin-top: px;
    margin-bottom: 50px;
    text-align: center;
@@ -52,9 +54,12 @@
  .lead {
    margin-bottom: 60px;
    text-align: center;
-
+   margin-top: 50px;
    color: white;
  }
+ }
+
+
 
 
 //--------resume table------
@@ -99,6 +104,35 @@
    /* Margin bottom by footer height */
    margin-bottom: 100px;
  }
+
+
+//---------Content---------
+
+.content-section-a {
+   padding: 50px 0;
+   background-color: #f8f8f8;
+}
+
+.content-section-b {
+   padding: 50px 0;
+   border-top: 1px solid #e7e7e7;
+   border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading-spacer {
+   float: left;
+   width: 200px;
+   border-top: 3px solid #e7e7e7;
+}
+
+.section-heading {
+   margin-bottom: 30px;
+}
+
+.lead {
+   font-size: 18px;
+   font-weight: 400;
+}
 
  //-----nav
    .navbar-default {
@@ -347,6 +381,26 @@ footer .footer-below {
     background-color: #004D40;
 }
 
+.soc-media-ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;//隐藏有序列表的黑点
+}
+
+.soc-media-ul a {
+  display: block;
+  padding: 0.5em .65rem;
+  font-size: 3rem;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: #24d3d3;
+  }
+}
+
 
 //-------Common-------
 .col-centerd{
@@ -357,3 +411,92 @@ footer .footer-below {
 .customed-flash {
   margin: -50px 0px 21px 0px; // the message of flash
 }
+
+.city-change {
+  margin: -50px 0px 21px 0px
+}
+
+//shadow of work list bar
+.custab{
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
+
+
+/*--- Job ---*/
+
+.job-content{
+  min-height: 725px;
+  margin-top: 100px;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.side-box{
+ display: inline-block;
+ position: absolute;
+ margin-top: 112px; //这些根据你的页面显示自己调节数值
+ margin-left: 35px;
+ padding-bottom: 12.5px;
+ min-width: 260px;
+
+ background-color: #1A6561;
+ color: #fff;
+ box-shadow: 2px 2px 3px #aaa;
+}
+
+.job-box{
+ border: 1.5px solid #ddd;
+ box-shadow: 1px 1px 5px #ccc;
+ margin-top: 12.5px;
+ padding: 15px 1px 1px 20px;
+ background-color: #fff;
+ color: #555;
+ font-size: 16px;
+
+ div{
+ margin-bottom: 5px;
+ }
+}
+
+  .suggest-title{
+    padding: 12.5px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+
+
+  .suggest-content{
+    background-color: #fff;
+    padding: 7.5px;
+    border: 0.5px dashed #eee;
+
+
+    h3{
+  margin-top: 1px;
+  font-size: 16px;
+}
+
+p{
+  font-size: 16px;
+  color: #FF7D0A;
+  letter-spacing: -1px;
+}
+
+span{
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+  }
