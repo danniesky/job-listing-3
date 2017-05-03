@@ -17,6 +17,3 @@
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require_tree .
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
